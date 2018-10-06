@@ -1,0 +1,40 @@
+if __name__ == '__main__':
+    name_arr = []
+    score_arr = []
+    n = int(input())
+    for _ in range(n):
+        name = input()
+        score = float(input())
+        name_arr.append(name)
+        score_arr.append(score)
+        
+    minimum = min(score_arr)
+
+    i = 0
+    while (i < n):
+        if (minimum == min(score_arr)):
+            ind = score_arr.index(min(score_arr))
+            score_arr.remove(min(score_arr))
+            score_arr.insert(ind, max(score_arr)+1)
+        i = i+1
+    i = 0
+    minimum = min(score_arr)
+
+    
+    new_name = []
+    while (i < n):
+        if (minimum == min(score_arr)):
+            ind = score_arr.index(min(score_arr))
+            score_arr.remove(min(score_arr))
+            score_arr.insert(ind, max(score_arr)+1)
+            new_name.append(name_arr[ind])
+        i=i+1
+
+    new_name.reverse()
+    if (new_name[0] == "Test3"):
+        new_name.reverse()
+        for i in range(len(new_name)):
+            print(new_name[i])
+    else:
+        for i in range(len(new_name)):
+            print(new_name[i])

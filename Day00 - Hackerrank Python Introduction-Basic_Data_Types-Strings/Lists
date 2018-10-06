@@ -1,0 +1,25 @@
+if __name__ == '__main__':
+    N = int(input())
+    t_list = []
+    for _ in range(N):
+        x = input().split(" ")
+        query = x[0]
+        
+        if (query == "insert"):
+            index = int(x[1])
+            value = int(x[2])
+            t_list.insert(index, value)
+        elif (query == "print"):
+            print(t_list)
+        elif (query == "remove"):
+            value = int(x[1])
+            t_list.remove(value)
+        elif (query == "append"):
+            value = int(x[1])
+            t_list.append(value)
+        elif (query == "sort"):
+            t_list.sort()
+        elif (query == "pop"):
+            t_list.pop()
+        elif (query == "reverse"):
+            t_list.reverse()
