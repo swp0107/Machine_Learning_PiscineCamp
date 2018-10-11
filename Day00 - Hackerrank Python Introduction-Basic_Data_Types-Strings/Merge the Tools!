@@ -1,0 +1,9 @@
+def merge_the_tools(string, k):
+    for part in zip(*[iter(string)] * k):
+        d=dict()
+        print(''.join([d.setdefault(x, x) for x in part if (x not in d)]))
+    # setdefault method returns the key value available in the dictionary and if given key is not available then it will be provided default value and addded to the dictionary.
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
