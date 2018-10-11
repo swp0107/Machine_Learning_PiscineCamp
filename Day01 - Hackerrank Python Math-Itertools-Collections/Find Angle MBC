@@ -1,0 +1,8 @@
+#!/bin/python3
+
+import math
+
+x = int(input())
+y = int(input())
+
+print(str(int(round(math.degrees(math.atan(x/y)))))+'°')
