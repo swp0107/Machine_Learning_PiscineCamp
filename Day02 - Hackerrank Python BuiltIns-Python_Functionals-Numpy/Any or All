@@ -1,0 +1,23 @@
+n = input()
+
+def reverse(s):
+    return (s[::-1])
+
+def isPalindrome(s):
+    rev = reverse(s)
+    if (s == rev):
+        return (True)
+    return (False)
+
+#for i in s:
+#    if (all(int(i)>=0)):
+#        if (any(i==i[::-1])):
+#            print(True)
+#        else:
+#            print(False)
+#    else:
+#        print(False)
+
+arr = input().split()
+
+print(all(int(i)>=0 for i in arr) and any(i == i[::-1]for i in arr))
