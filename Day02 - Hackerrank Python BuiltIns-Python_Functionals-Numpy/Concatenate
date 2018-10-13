@@ -1,0 +1,10 @@
+import numpy
+
+n,m,p = map(int, input().split())
+
+arr = numpy.array([input().split() for _ in range(n)], int)
+arrb = numpy.array([input().split() for _ in range(m)], int)
+
+res = numpy.concatenate((arr, arrb), axis = 0)
+    
+print(res)
